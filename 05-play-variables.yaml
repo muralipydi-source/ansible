@@ -8,7 +8,7 @@
   tasks:
    - name: variables define
      ansible.builtin.debug:
-       msg: "HELLO YOUR NAME {{FIRSTNAME}}, {{MIDDLENAME}}, {{LASTNAME}}"
+       msg: "HELLO YOUR NAME IS {{FIRSTNAME}} {{MIDDLENAME}} {{LASTNAME}}"
 
 
 

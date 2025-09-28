@@ -1,0 +1,14 @@
+- name: To work with variables
+  hosts: local
+  connection: local
+  vars:
+    FIRSTNAME: MURALI
+    MIDDLENAME: KRISHNA
+    LASTNAME: PYDI
+  tasks:
+   - name: variables define
+     ansible.builtin.debug:
+       msg: "HELLO YOUR NAME {{FIRSTNAME}}, {{MIDDLENAME}}, {{LASTNAME}}"
+
+
+

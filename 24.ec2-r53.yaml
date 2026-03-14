@@ -6,9 +6,9 @@
     - mysql
     - backend
     - frontend
-    subnet_id: subnet-0984d47e985171bd0
-    sg_id: sg-01bc7ebe005fb1cb2
-    zone: daws84s.site
+    subnet_id: subnet-0ea27497f199ead2e
+    sg_id: sg-0b64457af8f28a991
+    zone: muraliitemp.online
   tasks:
   - name: create ec2
     amazon.aws.ec2_instance:
@@ -16,7 +16,7 @@
       vpc_subnet_id: "{{ subnet_id }}"
       instance_type: t3.micro
       security_group: "{{ sg_id }}"
-      image_id: ami-09c813fb71547fc4f
+      image_id: ami-0220d79f3f480ecf5
       tags:
         Name: "{{ item }}"
     loop: "{{ instances }}"
